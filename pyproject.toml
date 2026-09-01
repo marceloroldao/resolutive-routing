@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resolutive-routing"
+version = "0.1.0"
+description = "Deterministic routing experiments for heterogeneous M2A2 nodes"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "Marcelo Roldao Matos"}]
+dependencies = []
+
+[project.scripts]
+resolutive-routing-demo = "resolutive_routing.simulator:main"
+resolutive-routing-benchmark = "resolutive_routing.benchmark:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
