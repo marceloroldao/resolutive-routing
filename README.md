@@ -230,6 +230,8 @@ The immediate objective is simpler:
 
 ## Prototype v0.1
 
+Archival DOI: **[10.5281/zenodo.22235924](https://doi.org/10.5281/zenodo.22235924)**.
+
 The first executable prototype is intentionally small and dependency-free. It includes:
 
 - typed request and node contracts;
