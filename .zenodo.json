@@ -1,0 +1,23 @@
+{
+  "creators": [
+    {
+      "name": "Matos, Marcelo Roldão",
+      "orcid": "0009-0003-6075-4680"
+    }
+  ],
+  "title": "resolutive-routing: Deterministic Routing for the M2A2 / MA2A Ecosystem — v0.1.0",
+  "version": "0.1.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng",
+  "description": "First deterministic research baseline for policy-first and explainable routing across heterogeneous M2A2 nodes.",
+  "keywords": [
+    "resolutive routing",
+    "M2A2",
+    "MA2A",
+    "deterministic routing",
+    "distributed computing",
+    "explainable routing",
+    "resource credits"
+  ]
+}

@@ -226,3 +226,36 @@ Do not begin with:
 The immediate objective is simpler:
 
 > Prove that heterogeneous M2A2 nodes can advertise spare capacity, receive authorized work, return verifiable results, and maintain a fair auditable resource balance while the router selects an efficient admissible path.
+
+
+## Prototype v0.1
+
+The first executable prototype is intentionally small and dependency-free. It includes:
+
+- typed request and node contracts;
+- policy-first deterministic routing;
+- explainable decisions and explicit fallback;
+- separate compute, storage and knowledge credit accounting;
+- five routing baselines;
+- a deterministic three-node simulator;
+- tests and a reproducible microbenchmark.
+
+### Run locally
+
+```bash
+python -m pip install -e .
+python -m unittest discover -s tests -v
+python -m resolutive_routing.simulator
+python -m resolutive_routing.benchmark
+```
+
+Python 3.10 or newer is required. See [architecture](docs/ARCHITECTURE.md), [benchmark protocol](docs/BENCHMARKS.md), [roadmap](docs/ROADMAP.md) and [changelog](CHANGELOG.md).
+
+### Current status
+
+Version 0.1 is a research baseline, not a distributed network or production scheduler. Identity and transport remain M2A2 responsibilities; memory remains a Memoria.ia responsibility. Timing measurements are diagnostic and must not be interpreted as unsupported performance claims.
+
+
+## License
+
+Source is publicly visible under the **Resolutive Research and Non-Commercial License (RRNCL) v1.0**. Academic, educational and permitted non-commercial research use is allowed under its terms. Commercial use requires separate written authorization. Because commercial use is restricted, this project must not be represented as OSI-approved Open Source.

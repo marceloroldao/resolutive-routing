@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use resolutive-routing in academic or scientific work, please cite this software."
+title: "resolutive-routing: Deterministic Routing for the M2A2 / MA2A Ecosystem — v0.1.0"
+type: software
+authors:
+  - family-names: "Matos"
+    given-names: "Marcelo Roldão"
+    orcid: "https://orcid.org/0009-0003-6075-4680"
+abstract: "First deterministic research baseline for policy-first routing across heterogeneous M2A2 nodes, including explainable selection, capability and privacy filtering, routing baselines, simulation, and a separated resource-credit ledger."
+repository-code: "https://github.com/marceloroldao/resolutive-routing"
+version: "0.1.0"
+date-released: "2026-09-01"
+license-url: "https://github.com/marceloroldao/resolutive-routing/blob/main/LICENSE"
+keywords:
+  - resolutive routing
+  - M2A2
+  - MA2A
+  - deterministic routing
+  - distributed computing
+  - explainable routing
+  - resource credits
