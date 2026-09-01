@@ -8,6 +8,7 @@ authors:
     orcid: "https://orcid.org/0009-0003-6075-4680"
 abstract: "First deterministic research baseline for policy-first routing across heterogeneous M2A2 nodes, including explainable selection, capability and privacy filtering, routing baselines, simulation, and a separated resource-credit ledger."
 repository-code: "https://github.com/marceloroldao/resolutive-routing"
+doi: "10.5281/zenodo.22235924"
 version: "0.1.0"
 date-released: "2026-09-01"
 license-url: "https://github.com/marceloroldao/resolutive-routing/blob/main/LICENSE"
