@@ -7,7 +7,7 @@ name = "resolutive-routing"
 version = "0.1.0"
 description = "Deterministic routing experiments for heterogeneous M2A2 nodes"
 requires-python = ">=3.10"
-license = {text = "Apache-2.0"}
+license = {text = "Resolutive Research and Non-Commercial License (RRNCL) v1.0"}
 authors = [{name = "Marcelo Roldao Matos"}]
 dependencies = []
 
