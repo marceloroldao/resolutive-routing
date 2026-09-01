@@ -19,5 +19,11 @@
     "distributed computing",
     "explainable routing",
     "resource credits"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.22235924",
+      "relation": "isIdenticalTo"
+    }
   ]
 }
