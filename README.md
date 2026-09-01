@@ -254,3 +254,8 @@ Python 3.10 or newer is required. See [architecture](docs/ARCHITECTURE.md), [ben
 ### Current status
 
 Version 0.1 is a research baseline, not a distributed network or production scheduler. Identity and transport remain M2A2 responsibilities; memory remains a Memoria.ia responsibility. Timing measurements are diagnostic and must not be interpreted as unsupported performance claims.
+
+
+## License
+
+Source is publicly visible under the **Resolutive Research and Non-Commercial License (RRNCL) v1.0**. Academic, educational and permitted non-commercial research use is allowed under its terms. Commercial use requires separate written authorization. Because commercial use is restricted, this project must not be represented as OSI-approved Open Source.
