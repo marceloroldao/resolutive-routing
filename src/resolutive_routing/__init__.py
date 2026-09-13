@@ -22,4 +22,4 @@ __all__ = [
     "evaluate_route_quality",
     "reroute_after_failure",
 ]
-__version__ = "0.1.1"
+__version__ = "0.1.0"
