@@ -20,3 +20,10 @@ jobs:
       - run: python -m resolutive_routing.simulator
       - run: python -m resolutive_routing.benchmark
 
+  cpp-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cmake -S cpp -B cpp/build -DCMAKE_BUILD_TYPE=Release
+      - run: cmake --build cpp/build --config Release --parallel
+      - run: ctest --test-dir cpp/build --output-on-failure
