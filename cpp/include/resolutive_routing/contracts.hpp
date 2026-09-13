@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <map>
 #include <optional>
 #include <string>
 #include <vector>
@@ -14,6 +15,15 @@ enum class Scope {
     Public,
 };
 
+enum class RequestType {
+    Knowledge,
+    Memory,
+    Compute,
+    Inference,
+    Storage,
+    Echo,
+};
+
 struct NodeSnapshot {
     std::string node_id;
     std::string organization_id;
@@ -23,14 +33,22 @@ struct NodeSnapshot {
     double compute_capacity{};
     double current_load{};
     double latency_ms{};
-    double reputation{};
+    double reputation{1.0};
+    double cost{};
+    double credit_balance{};
     std::vector<std::string> models;
     std::vector<std::string> memory_domains;
     std::vector<Scope> supported_scopes;
+
+    [[nodiscard]] double available_compute() const noexcept {
+        const auto remaining = compute_capacity * (1.0 - current_load);
+        return remaining > 0.0 ? remaining : 0.0;
+    }
 };
 
 struct Request {
     std::string request_id;
+    RequestType type{RequestType::Compute};
     Scope scope{Scope::Private};
     std::string source_node_id;
     std::string organization_id;
@@ -38,12 +56,22 @@ struct Request {
     std::optional<std::string> knowledge_domain;
     double min_compute{};
     std::optional<double> max_latency_ms;
+    double required_confidence{};
+};
+
+struct CandidateScore {
+    std::string node_id;
+    double score{};
+    std::vector<std::string> reasons;
 };
 
 struct RouteDecision {
     std::optional<std::string> selected_node_id;
-    std::string reason;
     double score{};
+    std::vector<std::string> reasons;
+    std::map<std::string, std::vector<std::string>> rejected_nodes;
+    std::vector<CandidateScore> candidates;
+    bool fallback{};
 };
 
 struct FailureEvent {
