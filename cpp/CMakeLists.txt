@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.20)
+project(resolutive_routing_core LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+add_library(resolutive_routing_core INTERFACE)
+target_include_directories(resolutive_routing_core INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+add_executable(resolutive_routing_contract_test tests/contract_test.cpp)
+target_link_libraries(resolutive_routing_contract_test PRIVATE resolutive_routing_core)
+
+enable_testing()
+add_test(NAME resolutive_routing_contract_test COMMAND resolutive_routing_contract_test)
