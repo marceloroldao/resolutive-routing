@@ -11,5 +11,9 @@ target_include_directories(resolutive_routing_core INTERFACE ${CMAKE_CURRENT_SOU
 add_executable(resolutive_routing_contract_test tests/contract_test.cpp)
 target_link_libraries(resolutive_routing_contract_test PRIVATE resolutive_routing_core)
 
+add_executable(resolutive_routing_router_test tests/router_test.cpp)
+target_link_libraries(resolutive_routing_router_test PRIVATE resolutive_routing_core)
+
 enable_testing()
 add_test(NAME resolutive_routing_contract_test COMMAND resolutive_routing_contract_test)
+add_test(NAME resolutive_routing_router_test COMMAND resolutive_routing_router_test)
