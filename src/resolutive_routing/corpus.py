@@ -85,6 +85,13 @@ def scenario_corpus() -> tuple[RoutingScenario, ...]:
             "PRIVATE rejects an untrusted node even when it has lower latency and more compute.",
         ),
         RoutingScenario(
+            "public_multi_candidate",
+            Request("case_public", RequestType.COMPUTE_REQUEST, Scope.PUBLIC, "node_local", "org_1", min_compute=10, max_latency_ms=50),
+            (fast, heavy, foreign),
+            "node_foreign",
+            "Several nodes are admissible; resolutive routing should choose one rather than flood all candidates.",
+        ),
+        RoutingScenario(
             "no_valid_route",
             Request("case_none", RequestType.INFERENCE_REQUEST, Scope.ORGANIZATION, "node_local", "org_1", required_model="vision_large", max_latency_ms=10),
             (fast, heavy, foreign),
