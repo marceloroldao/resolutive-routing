@@ -258,7 +258,9 @@ Python 3.10 or newer is required. See [architecture](docs/ARCHITECTURE.md), [ben
 Version 0.1 is a research baseline, not a distributed network or production scheduler. Identity and transport remain M2A2 responsibilities; memory remains a Memoria.ia responsibility. Timing measurements are diagnostic and must not be interpreted as unsupported performance claims.
 
 
-## v0.2.0-rc1 candidate\n\nZenodo DOI: **10.5281/zenodo.22866104**.
+## v0.2.0-rc1 candidate
+
+Zenodo DOI: **10.5281/zenodo.22866104**.
 
 The v0.2 release candidate adds the production-shaped routing boundary used by MA2A resilient execution:
 
