@@ -260,6 +260,8 @@ Version 0.1 is a research baseline, not a distributed network or production sche
 
 ## v0.2.0-rc1 candidate
 
+Zenodo DOI: **10.5281/zenodo.22866104**.
+
 The v0.2 release candidate adds the production-shaped routing boundary used by MA2A resilient execution:
 
 - C++20 deterministic routing hot path;
@@ -270,7 +272,7 @@ The v0.2 release candidate adds the production-shaped routing boundary used by M
 - scenario corpus and route-quality metrics;
 - Release-mode C++ test assertions kept active in CI.
 
-The archived v0.1.0 DOI remains **10.5281/zenodo.22235924**. A v0.2 DOI must only be added after the v0.2.0-rc1 snapshot is actually archived.
+The archived v0.1.0 DOI remains **10.5281/zenodo.22235924**. The archived v0.2.0-rc1 DOI is **10.5281/zenodo.22866104**.
 
 ## License
 
