@@ -21,12 +21,22 @@ The code line starts from routing main commit `d5bb5a5be495002836817780d10a3d8ab
 - [x] Route-quality corpus/metrics/comparison tooling present.
 - [x] Package version prepared as `0.2.0rc1`.
 - [x] Zenodo metadata identifies v0.1 as the previous version rather than reusing its DOI.
-- [ ] Release-mode C++ assertion guard green in CI.
-- [ ] Python CI green on 3.10, 3.11, 3.12 and 3.13.
-- [ ] C++ core CI green with assertions active.
+- [x] Release-mode C++ assertion guard green in CI.
+- [x] Python CI green on 3.10, 3.11, 3.12 and 3.13.
+- [x] C++ core CI green with assertions active.
 - [ ] MA2A release candidate pins this routing snapshot exactly.
 - [ ] Git tag / GitHub release `v0.2.0-rc1` created.
 - [ ] Zenodo archival DOI minted for the exact tagged snapshot.
+
+## CI evidence
+
+GitHub Actions run `35547860343` (CI run #110) passed:
+
+- Python 3.10: success
+- Python 3.11: success
+- Python 3.12: success
+- Python 3.13: success
+- C++ Release core with assertions explicitly enabled: success
 
 ## Frozen responsibility boundary
 
