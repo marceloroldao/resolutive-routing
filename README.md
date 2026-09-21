@@ -191,11 +191,11 @@ resolutive-routing
 
 `resolutive-routing` should not duplicate Memoria.ia or become the database itself.
 
-## Development trigger
+## Development status
 
-The repository is being initialized now to preserve the architecture and contracts.
+The repository has moved beyond the initialization phase. The v0.2 release-candidate line includes a native C++20 routing hot path, deterministic rerouting after authenticated failure evidence, Python/C++ parity tests, and direct integration with MA2A resilient execution.
 
-Implementation should remain incremental. The first serious routing implementation should begin when at least two real nodes can exchange requests/jobs and we can measure whether routing beats global broadcast or fixed static assignment.
+The router remains intentionally limited to route decisions and evaluation. Identity, authentication, discovery, transport, job execution and result delivery remain MA2A responsibilities.
 
 ## First experiments
 
@@ -257,6 +257,20 @@ Python 3.10 or newer is required. See [architecture](docs/ARCHITECTURE.md), [ben
 
 Version 0.1 is a research baseline, not a distributed network or production scheduler. Identity and transport remain M2A2 responsibilities; memory remains a Memoria.ia responsibility. Timing measurements are diagnostic and must not be interpreted as unsupported performance claims.
 
+
+## v0.2.0-rc1 candidate
+
+The v0.2 release candidate adds the production-shaped routing boundary used by MA2A resilient execution:
+
+- C++20 deterministic routing hot path;
+- Python/C++ parity;
+- cumulative node exclusion and deterministic rerouting;
+- authenticated MA2A failure-notice adaptation;
+- explicit ownership boundary in `docs/ROUTING_CONTRACT_V0.2.md`;
+- scenario corpus and route-quality metrics;
+- Release-mode C++ test assertions kept active in CI.
+
+The archived v0.1.0 DOI remains **10.5281/zenodo.22235924**. A v0.2 DOI must only be added after the v0.2.0-rc1 snapshot is actually archived.
 
 ## License
 
