@@ -24,9 +24,9 @@ The code line starts from routing main commit `d5bb5a5be495002836817780d10a3d8ab
 - [x] Release-mode C++ assertion guard green in CI.
 - [x] Python CI green on 3.10, 3.11, 3.12 and 3.13.
 - [x] C++ core CI green with assertions active.
-- [ ] MA2A release candidate pins this routing snapshot exactly.
-- [ ] Git tag / GitHub release `v0.2.0-rc1` created.
-- [ ] Zenodo archival DOI minted for the exact tagged snapshot.
+- [x] MA2A release candidate pins this routing snapshot exactly.
+- [x] Git tag / GitHub release `v0.2.0-rc1` created.
+- [x] Zenodo archival DOI minted for the exact tagged snapshot: `10.5281/zenodo.22866104`.
 
 ## CI evidence
 
@@ -38,7 +38,7 @@ GitHub Actions run `35547860343` (CI run #110) passed:
 - Python 3.13: success
 - C++ Release core with assertions explicitly enabled: success
 
-## Frozen responsibility boundary
+## Archival record\n\n- GitHub tag: `v0.2.0-rc1`\n- Frozen commit: `17bf787d92589ad398bf9f65c1eecbbbbde8f6b1`\n- Zenodo DOI: `10.5281/zenodo.22866104`\n\n## Frozen responsibility boundary
 
 `resolutive-routing` owns:
 
