@@ -8,7 +8,7 @@ authors:
     orcid: "https://orcid.org/0009-0003-6075-4680"
 abstract: "Release candidate for the deterministic routing decision layer of the M2A2 / MA2A ecosystem, including the C++20 routing hot path, Python/C++ parity, authenticated failure adaptation, deterministic rerouting, routing-quality evaluation, and a strict ownership boundary that leaves identity and transport in MA2A."
 repository-code: "https://github.com/marceloroldao/resolutive-routing"
-version: "0.2.0-rc1"
+version: "0.2.0-rc1"\ndoi: "10.5281/zenodo.22866104"
 date-released: "2026-09-20"
 license-url: "https://github.com/marceloroldao/resolutive-routing/blob/main/LICENSE"
 keywords:
