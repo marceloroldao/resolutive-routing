@@ -8,6 +8,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_library(resolutive_routing_core INTERFACE)
 target_include_directories(resolutive_routing_core INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
+add_executable(resolutive_routing_assertions_enabled_test tests/assertions_enabled_test.cpp)
+target_link_libraries(resolutive_routing_assertions_enabled_test PRIVATE resolutive_routing_core)
+
 add_executable(resolutive_routing_contract_test tests/contract_test.cpp)
 target_link_libraries(resolutive_routing_contract_test PRIVATE resolutive_routing_core)
 
@@ -26,7 +29,25 @@ target_link_libraries(resolutive_routing_failure_adapter_test PRIVATE resolutive
 add_executable(resolutive_routing_authenticated_failover_test tests/authenticated_failover_test.cpp)
 target_link_libraries(resolutive_routing_authenticated_failover_test PRIVATE resolutive_routing_core)
 
+set(RESOLUTIVE_ROUTING_TEST_TARGETS
+ resolutive_routing_assertions_enabled_test
+ resolutive_routing_contract_test
+ resolutive_routing_router_test
+ resolutive_routing_parity_test
+ resolutive_routing_reroute_test
+ resolutive_routing_failure_adapter_test
+ resolutive_routing_authenticated_failover_test
+)
+foreach(target IN LISTS RESOLUTIVE_ROUTING_TEST_TARGETS)
+ if(MSVC)
+  target_compile_options(${target} PRIVATE /UNDEBUG)
+ else()
+  target_compile_options(${target} PRIVATE -UNDEBUG)
+ endif()
+endforeach()
+
 enable_testing()
+add_test(NAME resolutive_routing_assertions_enabled_test COMMAND resolutive_routing_assertions_enabled_test)
 add_test(NAME resolutive_routing_contract_test COMMAND resolutive_routing_contract_test)
 add_test(NAME resolutive_routing_router_test COMMAND resolutive_routing_router_test)
 add_test(NAME resolutive_routing_parity_test COMMAND resolutive_routing_parity_test)
